@@ -1,0 +1,16 @@
+/* styles.css */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table td {
+  border: 1px solid black; /* Initial border for all sides */
+  padding: 8px;
+}
+
+.custom-table td {
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}

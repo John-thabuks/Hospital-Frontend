@@ -1,0 +1,98 @@
+.main_one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.easy_scheduling {
+  max-width: 40%;
+  margin-left: 300px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.easy_scheduling h2 {
+  font-size: 80px;
+}
+
+.easy_scheduling p {
+  font-size: 30px;
+}
+
+.easy_image {
+  background-image: url("/images/Online-Appointment.jpg");
+  width: 60%;
+  height: 600px;
+  background-size: fill;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  border-radius: 20px;
+  background-position: right;
+}
+
+.main_two {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin-left: 220px;
+  background-color: #dbdfde;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.booking_steps {
+  position: relative;
+}
+
+.numbers,
+.headingNum {
+  display: inline-block;
+  font-size: 30px;
+}
+
+.numbers {
+  background-color: #e12c2d;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  margin-left: -50px;
+  padding: 5px 5px;
+}
+
+.numbers h2::after {
+  content: ".";
+  text-align: center;
+}
+
+.headingNum {
+  max-width: 200px;
+  height: 150px;
+}
+.booking_steps p {
+  font-size: 18px;
+  margin-left: -100px;
+}
+
+.main_three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  background-color: #e12c2d;
+  margin-top: 50px;
+  margin-left: 220px;
+  line-height: 80px;
+}
+
+.main_three h1 {
+  color: #fffeff;
+  font-size: 50px;
+}
+
+.main_three p {
+  color: #fffeff;
+  font-size: larger;
+}
