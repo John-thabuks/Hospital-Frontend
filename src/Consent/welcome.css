@@ -1,12 +1,10 @@
-/* styles.css */
 .custom-table {
   width: 100%;
   border-collapse: collapse;
 }
 
 .custom-table td {
-  border: 1px solid black; /* Initial border for all sides */
-  padding: 8px;
+  border: 1px solid black;
 }
 
 .custom-table td {
