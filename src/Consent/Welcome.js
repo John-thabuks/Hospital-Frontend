@@ -2,11 +2,12 @@ import React from 'react';
 import './welcome.css'
 import WelcomeImage from "../RelativeImages/WelcomePage.png"
 import welcomeCalender from "../RelativeImages/welcomeCalender.png"
+import { Link } from "react-router-dom"
 
 const Welcome = () => {
     return (
         <div>
-            <table class="custom-table">
+            <table className="custom-table">
                 <tr>
                     <td></td>
                     <td></td>
@@ -29,8 +30,14 @@ const Welcome = () => {
             <div className='firstHeading'>
                 <h2>Get Started</h2>
                 <p>Start yoour appointment journey and management</p>
-                <button className='gettingStarted'>Get Started </button>
-                <button>My Appointment</button>
+
+                <Link to="/BookAppointment">
+                    <button className='gettingStarted'>Get Started </button>
+                </Link>
+
+                <Link to="/MyAppointments">
+                    <button>My Appointment</button>
+                </Link>
             </div>
 
             <div>
