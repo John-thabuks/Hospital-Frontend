@@ -172,6 +172,7 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import "./BookAppointment.css"
 
 function BookAppointment() {
     const [formData, setFormData] = useState({
