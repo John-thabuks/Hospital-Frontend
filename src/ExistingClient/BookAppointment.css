@@ -1,0 +1,53 @@
+.Parent {
+  margin-top: 40px;
+  margin-bottom: -8%;
+  max-height: 100vh;
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #b9ceac 54%,
+    #b9ceac 57%,
+    #ffffff 94%
+  );
+  display: flex;
+}
+
+.LeftSide {
+  margin-left: 100px;
+  margin-right: 400px;
+}
+
+.LeftSide h2 {
+  font-size: 50px;
+  line-height: 100px;
+}
+
+.LeftSide form {
+  font-size: 18px;
+  margin-bottom: 100px;
+  margin-left: 50px;
+}
+
+.LeftSide form label,
+.LeftSide form input {
+  margin-right: 10px;
+  margin-bottom: 26px;
+}
+
+.LeftSide form button {
+  margin-top: 40px;
+  margin-left: 200px;
+  font-size: larger;
+  background-color: #ff1237;
+  color: #ffffff;
+  padding: 2%;
+  border-radius: 50px;
+}
+
+.Right img {
+  border: none;
+  width: 400px;
+  height: 400px;
+  margin-top: 80px;
+  border-radius: 30px;
+}
