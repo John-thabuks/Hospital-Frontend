@@ -35,21 +35,54 @@ function BookAppointment() {
         });
     };
 
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     setSubmitted(true);
+    //     console.log(formData);
+    //     setFormData({
+    //         fullName: '',
+    //         phoneNumber: '',
+    //         email: '',
+    //         department: '',
+    //         clinic: '',
+    //         preferredTime: new Date(),
+    //         gender: '',
+    //         reason: '',
+    //     });
+    // };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
-        console.log(formData);
-        setFormData({
-            fullName: '',
-            phoneNumber: '',
-            email: '',
-            department: '',
-            clinic: '',
-            preferredTime: new Date(),
-            gender: '',
-            reason: '',
-        });
+
+        // Send a POST request to save the data
+        fetch('http://localhost:3001/Appointments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Clear the form fields after submission
+                setFormData({
+                    fullName: '',
+                    phoneNumber: '',
+                    email: '',
+                    department: '',
+                    clinic: '',
+                    preferredTime: new Date(),
+                    gender: '',
+                    reason: '',
+                });
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
     };
+
 
 
     const now = new Date();

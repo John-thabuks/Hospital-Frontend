@@ -1,0 +1,56 @@
+{
+  "Appointments": [
+    {
+      "fullName": "fdfvdf",
+      "phoneNumber": "0722495544",
+      "email": "thabuksprogrammer@gmail.com",
+      "department": "Radiology",
+      "clinic": "Obsidian",
+      "preferredTime": "2024-08-24T05:30:00.000Z",
+      "gender": "Female",
+      "reason": "eeeeeeeeeeeeedddddddddddd",
+      "id": 1
+    },
+    {
+      "fullName": "22eeeeeeeee",
+      "phoneNumber": "0722495544",
+      "email": "julius.mwangi@gmail.com",
+      "department": "Radiology",
+      "clinic": "Obsidian",
+      "preferredTime": "2024-08-31T05:30:00.000Z",
+      "gender": "Female",
+      "reason": "deeeeeeeeeeeeww",
+      "id": 2
+    },
+    {
+      "fullName": "Testing",
+      "phoneNumber": "sdssd",
+      "email": "caitlinmejia@example.com",
+      "department": "Gynecology",
+      "clinic": "Scan",
+      "preferredTime": "2024-08-22T13:30:00.000Z",
+      "gender": "Female",
+      "reason": "sdcsdcsdaasds",
+      "id": 3
+    }
+  ],
+  "departmentSelected": [
+    {
+      "Radiology": [
+        "John",
+        "Mary",
+        "Mercy"
+      ],
+      "Gynecology": [
+        "Obadiah",
+        "Alfred",
+        "Ochieng"
+      ],
+      "Dentist": [
+        "Mwiti",
+        "Njoroge",
+        "Kioko"
+      ]
+    }
+  ]
+}
