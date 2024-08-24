@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import SignatureCanvas from 'react-signature-canvas';
 import { jsPDF } from 'jspdf';
 import pdflogo from './pdflogo.png';
@@ -32,6 +33,7 @@ const Consent = () => {
     });
 
     const sigCanvas = useRef({});
+    const navigate = useNavigate();
 
     const handleCheckboxChange = () => {
         setChecked(!checked);
@@ -179,7 +181,27 @@ By signing below, I acknowledge that I have been provided with sufficient inform
         }
 
         doc.save('consent.pdf');
+        // Send a POST request to save the phoneNumber using json-server
+        fetch('http://localhost:3002/phoneNumbers', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ phoneNumber: patientDetails.phoneNumber })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Phone number saved successfully:', data);
+
+                // Redirect to the Appointment component after successful submission
+                // navigate('/Appointment');
+            })
+            .catch((error) => {
+                console.error('Error saving phone number:', error);
+            });
+
         handleClear();
+        navigate('/Appointment');
     }
 
     const handlePatientDetailsChange = (e) => {

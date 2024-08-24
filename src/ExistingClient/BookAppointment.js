@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { useNavigate } from "react-router-dom"
 import "./BookAppointment.css"
 import Logo from "../RelativeImages/AAR-LOGO-Blend.png"
 import "./BookAppointment.css"
@@ -19,6 +20,7 @@ function BookAppointment() {
     });
 
     const [submitted, setSubmitted] = useState(false);
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -77,6 +79,7 @@ function BookAppointment() {
                     gender: '',
                     reason: '',
                 });
+                navigate('/Welcome');
             })
             .catch((error) => {
                 console.error('Error:', error);

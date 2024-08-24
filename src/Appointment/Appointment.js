@@ -31,21 +31,48 @@ const Appointment = () => {
         alert(`Your verification code is: ${code}`)
     }
 
+    // const handleVerification = (e) => {
+    //     e.preventDefault()
+    //     if (verificationCode === generatedCode) {
+    //         setIsVerified(true)
+    //         if (data.phoneNumbers.includes(phone)) {
+    //             window.location.href = '/welcome'
+    //         }
+    //         else {
+    //             window.location.href = '/consent'
+    //         }
+    //     }
+    //     else {
+    //         alert("Incorrect verification code. Please try again.")
+    //     }
+    // }
+
     const handleVerification = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         if (verificationCode === generatedCode) {
-            setIsVerified(true)
-            if (data.phoneNumbers.includes(phone)) {
-                window.location.href = '/welcome'
-            }
-            else {
-                window.location.href = '/consent'
-            }
+            setIsVerified(true);
+
+            // Make a GET request to fetch the phoneNumbers from the data.json file
+            fetch('http://localhost:3002/phoneNumbers')
+                .then(response => response.json())
+                .then(data => {
+                    // Check if the phone exists in the fetched data
+                    const phoneExists = data.some(item => item.phoneNumber === phone);
+                    if (phoneExists) {
+                        window.location.href = '/welcome';
+                    } else {
+                        window.location.href = '/consent';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching phone numbers:', error);
+                });
+
+        } else {
+            alert("Incorrect verification code. Please try again.");
         }
-        else {
-            alert("Incorrect verification code. Please try again.")
-        }
-    }
+    };
+
 
     return (
         <>
